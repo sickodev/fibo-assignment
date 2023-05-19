@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["img.freepik.com", "api.dicebear.com"],
+        domains: [
+            "images.pexels.com",
+            "images.unsplash.com",
+            "cdn.pixabay.com",
+        ],
     },
 };
 
