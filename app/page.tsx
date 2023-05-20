@@ -125,16 +125,14 @@ export default function Home() {
                         </div>
                     </div>
                     <div className='mt-4 flex items-center justify-center'>
-                        <motion.button
-                            className={`bg-[#D15439] p-2 w-[300px] rounded-lg`}
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            transition={{ type: "spring", duration: 0.3 }}
+                        <button
+                            className={`bg-[#D15439] p-2 w-[300px] rounded-lg duration-200 transition-all ease-out active:scale-90`}
                         >
                             Order Now
-                        </motion.button>
+                        </button>
                     </div>
                 </div>
+                <div className='h-4 w-screen bg-[#28333A] -mt-1'></div>
             </div>
         </main>
     );
