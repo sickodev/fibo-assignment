@@ -4,10 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import FoodCard from "./components/FoodCard";
 import OfferCard from "./components/OfferCard";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({ subsets: ["latin"], weight: ["500"] });
 
 export default function Home() {
     return (
-        <main>
+        <main className='overflow-y-scroll scrollbar-hide'>
             <div
                 className='bg-fixed bg-cover w-screen h-[75vh] flex flex-col justify-between'
                 style={{
@@ -43,7 +46,7 @@ export default function Home() {
                         <p className='text-sm text-gray-400'>Food Influencer</p>
                     </div>
                 </div>
-                <div className='bg-[#28333A] py-4 px-2 rounded-t-[20px] overflow-y-hidden'>
+                <div className='bg-[#28333A] py-4 px-2 rounded-t-[20px] overflow-y-scroll scrollbar-hide'>
                     <div className='flex flex-col justify-center mx-2'>
                         <ChevronUpIcon className='h-6 w-6 mx-auto' />
                         <h3 className='text-xl font-bold'>Food Center</h3>
@@ -107,8 +110,8 @@ export default function Home() {
                         </div>
                         <h3 className='text-xl py-2'>Food Center</h3>
                     </div>
-                    <div className='bg-[#0D1317] flex items-center justify-between gap-4 -mx-2 px-4 py-6'>
-                        <div className='h-full w-[210px]'>
+                    <div className='bg-[#0D1317] flex items-center justify-between gap-1 -mx-2 px-4 py-6'>
+                        <div className='h-full w-[250px] px-2'>
                             <p className='mb-1 text-[12px]'>
                                 27th Jan - 18th Feb
                             </p>
@@ -116,10 +119,20 @@ export default function Home() {
                             <h4 className='text-lg'>25% OFF</h4>
                         </div>
                         <div className='flex flex-grow items-center justify-between gap-4 overflow-x-auto scrollbar-hide w-screen px-4'>
-                            <OfferCard />
-                            <OfferCard />
-                            <OfferCard />
+                            <OfferCard title='Chinese' />
+                            <OfferCard title='Indian' />
+                            <OfferCard title='Korean' />
                         </div>
+                    </div>
+                    <div className='mt-4 flex items-center justify-center'>
+                        <motion.button
+                            className={`bg-[#D15439] p-2 w-[300px] rounded-lg`}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ type: "spring", duration: 0.3 }}
+                        >
+                            Order Now
+                        </motion.button>
                     </div>
                 </div>
             </div>
