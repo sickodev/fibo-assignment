@@ -40,7 +40,7 @@ export default function Home() {
                     />
                     <div>
                         <h4 className='text-lg font-bold'>Bhardwaj Center</h4>
-                        <p className='text-sm'>Food Influencer</p>
+                        <p className='text-sm text-gray-400'>Food Influencer</p>
                     </div>
                 </div>
                 <div className='bg-[#28333A] py-4 px-2 rounded-t-[20px] overflow-y-hidden'>
