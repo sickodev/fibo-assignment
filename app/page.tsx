@@ -124,7 +124,7 @@ export default function Home() {
                             <OfferCard title='Korean' />
                         </div>
                     </div>
-                    <div className='mt-4 flex items-center justify-center'>
+                    <div className='mt-6 flex items-center justify-center'>
                         <button
                             className={`bg-[#D15439] p-2 w-[300px] rounded-lg duration-200 transition-all ease-out active:scale-90`}
                         >
@@ -132,7 +132,7 @@ export default function Home() {
                         </button>
                     </div>
                 </div>
-                <div className='h-4 w-screen bg-[#28333A] -mt-1'></div>
+                <div className='bg-[#28333A] h-4 w-screen absolute -mt-1 '></div>
             </div>
         </main>
     );
